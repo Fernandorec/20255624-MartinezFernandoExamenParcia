@@ -6,7 +6,6 @@ class Multa:
     def __str__(self):
         return f"Multa de {self.monto} por {self.motivo}"
     
-
 class MultaPrestamoLibro(Multa):
     def __init__(self, horas_retraso : float):
         monto = horas_retraso * 2.50
