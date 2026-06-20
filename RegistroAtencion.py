@@ -7,7 +7,7 @@ class RegistroAtencion:
         self.carnet = carnet
         self._recursos = []
         self.bibliotecario = bibliotecario
-        self.multas = int
+        self.multas = []
 
     def agregar_recurso(self, recurso):
         if len(self._recursos) >= 4:
@@ -16,18 +16,18 @@ class RegistroAtencion:
 
     def obtener_recursos(self):
         return self._recursos.copy()
-    
 
-    
+
+
     def __str__(self):
         return f"{self.codigo}, {self.carnet}, {self.bibliotecario}"
 
 
 
     def revision_Saldos(self, multas):
-        self.multas = sum(self.multas)
-    
-    
-    def Obtener_multas(self)
-        if ((sum(self.multas)* 100% / 15)) >= 15 :
+        self.multas = multas
+
+
+    def Obtener_multas(self):
+        if (sum(self.multas) * 100 / 15) >= 15:
             raise ValueError("CUENTA_SUSPENDIDA")
